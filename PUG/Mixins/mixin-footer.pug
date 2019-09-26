@@ -1,0 +1,19 @@
+mixin footerList(text, classul, classli, classa, ...items)
+    .footer__top--title.grid--title
+        i.fas.fa-th-large.grid--icon
+            span= text
+    .footer__top--main
+        ul(class=classul)
+            each item in items
+                li(class=classli)
+                    a(href='#' class=classa)= item
+mixin imgGrid(...imgs) 
+    each img in imgs
+        .img--gird
+            a(href="#")
+                img(src=img alt="Ảnh ngân hàng icon")
+mixin footerBottomMenu(ul, li, a, ...args)
+    ul(class=ul)
+        each item in args
+            li(class=li)
+                a(href="#" class=a)= item  

@@ -1,0 +1,52 @@
+.form__regis h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+.form__regis p {
+  color: #c6c6c6;
+}
+
+.form__regis .regis__form--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form__regis .regis__form--flex .regis__form--flex--left {
+  margin-right: 2rem;
+  width: 49%;
+}
+
+.form__regis .regis__form--flex .regis__form--flex--right {
+  width: 49%;
+}
+
+.form__regis .regis__form--flex input[type='text'] {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  border: 1px solid #e1e1e1;
+}
+
+.form__regis .regis__form--flex label::after {
+  content: '*';
+  color: red;
+}
+
+@media screen and (max-width: 768px) {
+  .resgister__responsive .form__regis .regis__form--flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .resgister__responsive .form__regis .regis__form--flex .regis__form--flex--left, .resgister__responsive .form__regis .regis__form--flex .regis__form--flex--right {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=registration.css.map */

@@ -1,0 +1,64 @@
+include mixins/mixin-homepage.pug
+// main
+.main.homepage--responsive
+    .resize__wrapper
+        .main__banner--flex
+            .banner__img--left
+                img(src="../../images/main-banner.png" alt="Ảnh banner 1" class="resize-img")
+            .banner__img--right
+                +bannerRight('fas fa-plane', 'Miễn phí vận chuyển', 'Chúng tôi vận chuyển miễn phí với các đơn hàng trị giá trên 1000.000 Đ')
+                +bannerRight('fas fa-sync-alt', 'chính sách đổi trả', 'Nếu phát hiện lỗi của nhà sản xuất, chúng tôi sẽ đổi mới sản phẩm trong 7 ngày đầu tiên.')
+                +bannerRight('fas fa-gift', 'khuyến mãi hàng tuần', 'Mỗi thứ 7 hàng tuần đều có chương trình giảm giá và khuyến mại lơn.')
+                +bannerRight('fas fa-thumbs-up', 'cam kết hàng chính hãng', 'Chúng tôi cam kết bán hàng chính hãng 100% với tất cả các loại sản phẩm')
+        .detailt__title
+            +details('sản phẩm nổi bật', 'fas fa-caret-left', 'fas fa-caret-right', true)
+            .details--grid
+                .details__flex--left.homepage__flex
+                    +detailsMenu('fas fa-th-large', 'fas fa-caret-down', 'Máy in phun khổ lớn', 'Máy quét Canon 3D', 'Máy hàn điện Alunima', 'Máy khoan Decameta', 'Máy phay đa năng CNC', 'Máy mài, tiện DC 12V', 'Máy khoan, cắt CNC', 'Máy quay thông minh N3', 'Motor R34C đa dạng', 'Máy in laser màu 3D')
+                .details__flex--right.details--grid.cart
+                    +detailsMenuItem(true, '../../images/nb-maykhoan-1.png','../../images/nb-maykhoan-2.png','../../images/nb-maykhoan-3.png','../../images/nb-maykhoan-4.png','../../images/nb-maykhoan-5.png','../../images/nb-maykhoan-6.png')
+        .detailt__title
+            +details('sản phẩm mới', 'fas fa-caret-left', 'fas fa-caret-right', false)
+            .details--grid
+                .details--gridd.details__flex--right.spm__grid
+                    +detailsMenuItem(true, '../../images/spm-1.png', '../../images/spm-2.png', '../../images/spm-3.png' )
+        .main__banner
+            .main__banner--left
+                img(src="../../images/main-banner 2.png" class="resize-img")
+            .main__banner--right
+                img(src="../../images/main-banner3.png" class="resize-img")
+        .detailt__title 
+            +details('sản phẩm bán chạy', 'fas fa-caret-left', 'fas fa-caret-right', false)
+            .details--grid
+                .details--gridd.details--grid--spbc.details__flex--right
+                    +detailsMenuItem(true, '../../images/spbc-1.png', '../../images/spbc-2.png', '../../images/spbc-3.png', '../../images/spbc-4.png', '../../images/spbc-5.png')
+        .banner__gird
+            .main__banner 
+                img(src="../../images/main-banner5.png" alt="Ảnh banner bottom" class="resize-img" )
+            .banner__grid__text
+                h3 ROCKET WORKARU
+                p Máy cắt, khoan đa năng tích hợp điều khiển từ xa loại nhỏ thích hợp với các hộ gia đình
+                .banner__grid--btn.grid--item--button
+                    button MUA NGAY
+                    button CHI TIẾT
+        .bottom__banner
+            .bottom__banner--img
+                img(src='../../images/main-banner4.png' class="resize-img")
+        .detailt__title
+            +details('hàng mới về', 'fas fa-caret-left', 'fas fa-caret-right', true)
+            .details--gridd.details__hmv
+                +detailsMenuItem(false, '../../images/hmv-1.png','../../images/hmv-2.png','../../images/hmv-3.png','../../images/hmv-4.png')
+
+    .main__slide
+        .wrapper__slide
+            +mainSlide('../../images/slide1.png', '../../images/slide2.png', '../../images/slide3.png', '../../images/slide4.png', '../../images/slide5.png')
+            a(href="#" class= "slide--prev") &#10094;
+            a(href="#" class= "slide--next") &#10095;
+    .main__contact
+        .contact__background
+            h3 Đăng ký để nhận tin khuyến mại hàng tuần
+            .background__text
+                input(type="email" placeholder="Nhập email của bạn")
+                button.background__btn--color ĐĂNG KÝ
+
+// end main

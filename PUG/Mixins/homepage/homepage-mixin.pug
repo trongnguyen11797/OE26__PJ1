@@ -1,0 +1,74 @@
+mixin bannerRight(i, h3, p) 
+    .banner__text
+        .banner__text--left
+            i(class= i)
+        .banner__text--right
+            h3= h3
+            p= p
+mixin details(span, i1, i2, menu)
+    .footer__top--title.grid--title
+        i.fas.fa-th-large.grid--icon
+            span= span    
+        .btn__flex
+            if(menu== true)
+                i(class= i1)
+                i(class= i2)
+            else
+                .btn__flex--left
+                    - var item = ['Máy khoan', 'Máy in 3D', 'Máy CNC', 'Máy tiện', 'Máy khác']
+                    each i in item
+                        a(href="#")= i     
+                .btn__flex--right
+                    i(class= i1)
+                    i(class= i2)
+mixin detailsMenu(i, i2, ...a) 
+    .details__flex--left--menu--column
+        i(class= 'fas fa-th-large')
+            span(href="#") Máy khoan, cắt CNC
+        i(class= 'fas fa-caret-down')
+    each item in a
+        .details__flex--left--menu--column.details__flex--left--menu--column--none
+            i(class= i)
+                span(href="#")= item
+            i(class= i2)
+mixin detailsMenuItem(TF, ...src)
+    if(TF == true)
+        each item in src
+            .details__grid--item
+                .grid--item--img
+                    img(src= item alt="Ảnh img sản phẩm" class="resize-img")
+                .grid--item--text
+                    p 1.550.00 Đ
+                    p MÁY KHOAN BLACK DECKER
+                    P
+                        - var item1 = ['fa fa-star']  
+                        - for(var i=0; i< 5; i++) {
+                            i(class= item1)
+                        - }
+                        span (12 Đánh giá)
+                .grid--item--button
+                    button Mua ngay
+                    button Xem chi tiết
+    else 
+        each item in src
+            .details__grid--item.details__hmv--grid
+                .grid--item--img
+                    img(src= item alt="Ảnh img sản phẩm" class="resize-img")
+                .details__hmv--right
+                    .grid--item--text.gird--item--text--style
+                        p MÁY KHOAN BLACK DECKER
+                        P   
+                            - var item1 = ['fa fa-star']  
+                                - for(var i=0; i< 5; i++) {
+                                    i(class= item1)
+                                - }
+                            span (12 Đánh giá)
+                        P Lorem ipsum dolar sit amet, consectetur adipiscing elit, sed do eiusmod tempor inclidunt ut labore commo...
+                        p 2.350.000 Đ
+                    .grid--item--button
+                        button Mua ngay
+                        button Xem chi tiết
+mixin mainSlide(...src)
+    each item in src
+        .slide
+            img(src= item class="resize-img")

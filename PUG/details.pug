@@ -1,0 +1,80 @@
+include mixins/mixin-details
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width,initial-scale=1.0")
+        meta(http-euiv="X-UA-Compatible" content="ie=edge")
+        title Giới thiệu website
+        link(rel="stylesheet" href="../../styles/reset/reset.css")
+        link(rel="stylesheet" href="../../styles/main.css")
+        // font css
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
+    body
+        include header.pug
+        .resize__wrapper.details__responsive
+            .link__web
+                p Trang chủ 
+                    i.fas.fa-caret-right
+                    |Danh mục sản phẩm
+                    i.fas.fa-caret-right
+                    | Máy khoan CNC 3D
+            .details--flex                
+                .details__flex--left
+                    +detailsMenu('fas fa-bars', 'danh mục sản phẩm')
+                    +detailsMenu('fas fa-th-large', 'Máy in phun khổ lớn', 'Máy quét Canon 3D', 'Máy hàn điện Alunima', 'Máy khoan Decameta', 'Máy phay đa năng CNC', 'Máy mài, tiện DC 12V', 'Máy khoan, cắt CNC', 'Máy quay thông minh N3', 'Motor R34C đa dạng', 'Máy in laser màu 3D')
+                    +detailsMenu('fas fa-gift', 'sản phẩm khuyến mại')
+                    - var i=1
+                    - for(i; i<= 5; i++) {
+                        +detailsMenuImg(`../../images/details-${i}.png `, 'máy khoan black decker loại 1', '1.550.000 Đ')
+                    - }
+                .details__flex--right
+                    .detai__flex
+                        .detai__left
+                            +detaiImg('../../images/detai.png', '../../images/spbc-1.png', '../../images/details-4.png', '../../images/img1.png', '../../images/cart-2.png', '../../images/spm-3.png')
+                        .detai__right
+                            h3 MÁY KHOAN CNC 3D
+                            .flex__icon
+                                .flex__icon-left
+                                    each item in ['fas fa-star']
+                                        - for(var i=0; i< 5; i++) {
+                                            i(class= item)
+                                        - } 
+                                    span (12 đánh giá)
+                                .flex__icon-right
+                                    a(href='#') | Gửi bình luận của bạn
+                            h4 GNY: 2.350.000 Đ
+                            p Thông tin sản phẩm:
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercition ullamco laboris nisi ut aliquip ex ea commodo consequat...
+                            .flex__sl
+                                .flex__sl--left
+                                    p Size:
+                                    select
+                                        option --Chọn size--
+                                .flex__sl--right
+                                    p Màu sắc:
+                                    select
+                                        option --Chọn màu--
+                                .flex__sl--right 
+                            input(type='number' min='1' max='99' value='1' )
+                            button MUA NGAY
+                            .share
+                                img(src='../../images/share.png' class="blog__details--responsive-img")
+                    .detai__text-title
+                        - var spans = ['thông tin sản phẩm', 'đánh giá - nhận xét', 'thẻ tags']
+                        span= spans[0]
+                        span= spans[1]
+                        span= spans[2]
+                    .detai__text-bottom
+                        - var paras = ['Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus.', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.', 'Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. ', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt.']
+                        p= paras[0]
+                        p= paras[1]
+                        p= paras[2]
+                        p= paras[3]
+                    +details('SẢN PHẨM TƯƠNG TỰ', 'fas fa-caret-left', 'fas fa-caret-right')
+                    .detai--grid
+                        +detailsMenuItem('../../images/nb-maykhoan-1.png', '../../images/nb-maykhoan-2.png', '../../images/spbc-3.png')
+        include footer.pug    
+

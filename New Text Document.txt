@@ -1,0 +1,14 @@
+<button  onclick='deleteId(this)'>btn1</button>
+<button  onclick='deleteId(this)'>btn2</button>
+<button onclick='deleteId(this)'>btn3</button>
+<script>
+function deleteId(id) {
+  let btn = document.querySelectorAll('button');
+  console.log(btn);
+  for(let i=0; i<btn.length; i++) {
+    if(btn[i].innerHTML === id.innerHTML) {
+      btn[i].remove();
+    }
+  }
+}
+</script>

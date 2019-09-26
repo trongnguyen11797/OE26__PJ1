@@ -1,0 +1,82 @@
+include mixins/mixin-footer.pug
+footer
+    .footer__wrapper
+        .resize__wrapper
+            .footer__top
+                .footer__me.footer--text
+                    .footer__top--title.grid--title
+                        i.fas.fa-th-large.grid--icon
+                            span về chúng tôi
+                    .footer__top--main
+                        ul.footer__menu
+                            li.footer__item Công ty Cổ phần Công nghệ DTK đã và đang khẳng định được vị trí hàng đầu trong lĩnh vực Thương mại điện tử
+                            li.footer__item.footer__add
+                                i.fas.fa-map-marker-alt
+                                    span Tầng 4 - Tòa nhà Hanoi Group 442 Đội Cẩn Ba Đình - Hà Nội
+                            li.footer__item
+                                i.fas.fa-envelope 
+                                    span support@dkt.com.vn
+                            li.footer__item
+                                i.fas.fa-mobile-alt 
+                                    span (84-4) 66558868 - (84-4) 37868904
+                .footer__policy.footer--text
+                    +footerList('chính sách','footer__menu', 'footer__item', 'footer__link', 'Chính sách giao hàng', 'Chính sách đổi sản phẩm', 'Chính sách bảo hành', 'Chính sách trả góp', 'Giới thiệu hàng đổi trả', 'Vẫn chuyển miễn phí')
+                .footer__service.footer--text
+                    +footerList('dịch vụ & hỗ trợ', 'footer__menu', 'footer__item', 'footer__link', 'Hệ thông cửa hàng', 'Hướng dẫn mua hàng', 'Hướng dẫn thanh toán', 'Tích điểm đổi thưởng', 'Dịch vụ đổi trả hàng', 'Câu hỏi thường gặp')
+                .footer__news.footer--text  
+                    +footerList('tin tức - sự kiện', 'footer__menu', 'footer__item', 'footer__link', 'Tin tức mới nhất', 'Tin tức khuyến mãi', 'Tuyển dụng, đãi ngộ', 'Download tài liệu', 'Chương trình đối tác', 'Nhà phát triển ứng dụng')
+                .footer__connect.footer--text
+                    .footer__top--title.grid--title
+                        i.fas.fa-th-large.grid--icon
+                            span Kết nối
+                    .footer__connect-flex
+                        ul.footer__menu
+                            li.footer__item
+                                i.fab.fa-facebook-f 
+                                    span Facebook
+                        ul.footer__menu
+                            li.footer__item
+                                i.fab.fa-twitter 
+                                    span Twitter
+                        ul.footer__menu
+                            li.footer__item
+                                i.fab.fa-google-plus-g 
+                                    span Google
+                        ul.footer__menu
+                            li.footer__item
+                                i.fab.fa-skype 
+                                    span Skype
+                        ul.footer__menu
+                            li.footer__item
+                                i.fab.fa-instagram 
+                                    span Instagram
+            .footer__main
+                .footer__bank.footer--text
+                    h3 Thanh toán:
+                    .footer__main--grid
+                        +imgGrid('../../images/footer-img1.png', '../../images/footer-img2.png','../../images/footer-img3.png','../../images/footer-img4.png','../../images/footer-img5.png','../../images/footer-img6.png','../../images/footer-img7.png','../../images/footer-img8.png')
+                .footer__answers.footer--text
+                    h3 Giải đáp nhanh
+                    .footer--bd-flex
+                        .footer--bd--hl(style="padding-bottom: 2rem;")
+                            .footer--border
+                                i.fas.fa-phone.alt
+                            .footer--hotline
+                                h4 Tư vấn miễn phí (24/7)
+                                p 1900 650 650
+                        .footer--bd--hl(style="padding-bottom: 2rem;")
+                            .footer--border
+                                i.far.fa-comments
+                            .footer--hotline
+                                h4 Góp ý - phản hồi - thắc mắc
+                                p 1900 650 650    
+    .footer__bottom--bg
+        .footer__bottom.resize__wrapper
+            .footer__copyright
+                    p 
+                        | Bản quyền thuộc về 
+                        span Design Team. 
+                        | Phát triển bởi 
+                        span Bizweb
+            +footerBottomMenu('footer__bottom--menu', 'footer__bottom--item', 'footer__bottom--link', 'Trang chủ', 'Giới thiệu', 'Sản phẩm', 'Tin khuyến mãi', 'Dịch vụ', 'Liên hệ')
+    

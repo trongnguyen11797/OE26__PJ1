@@ -1,0 +1,5 @@
+mixin detailsMenu(i, ...a) 
+    each item in a
+        .details__flex--left--menu--column.details__flex--left--menu--column--none.menu--hover.clear--padding
+            i(class= i)
+                span(href="#")= item

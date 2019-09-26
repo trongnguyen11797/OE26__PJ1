@@ -1,0 +1,265 @@
+@import "../variable/variable.scss";
+
+// Mobile
+.header__size {
+  background-color: #f7f7f7;
+}
+
+.header__top {
+  display: block;
+  
+  & .header__left {
+    display: none;
+    text-align: center;
+    & i {
+      font-size: $font-14;
+      width: 3.3333rem;
+      padding: 1.2rem 0;
+      &:hover {
+        background-color: $cam;
+        color: $white;
+        cursor: pointer;
+      }
+    }
+  }
+  & .header__right {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    
+    & a {
+      padding: 25px 40px;
+      color: #363636;
+      font-size: $font-12;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.header__logo img {
+  display: block;
+  margin: 0 auto;
+}
+ .header__hotline {
+  display: none;
+  & .header__hotline-left {
+    margin-right: 3.666667rem;
+  }
+  & .header__hotline-style {
+    display: block;
+    & h3 {
+      color: $cam;
+      font-size: $font-14;
+      padding-bottom: 0.5rem;
+    }
+    & p {
+      font-size: $font-13;
+      color: #898989;
+    }
+  }
+}
+.search--relative {
+  position: relative;
+  padding: 0 20px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+.header__search input {
+  max-width: 320px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 23px;
+  width: 100%;
+}
+.header__search input[placeholder] {
+  color: black;
+  padding: 18px 0 18px 23px;
+}
+.header__search button {
+  position: absolute;
+  right: 10%;
+  background-color: $white;
+  border: none;
+  top: 32%;
+}
+.header__bg-menu {
+  background-color: $da;
+  width: 100%;
+}
+// menu
+.header__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.menu__icon a,
+.header__cart a {
+  padding: 1.5rem 0;
+  display: block;
+}
+.header__menu {
+  display: none;
+  & .menu {
+    display: flex;
+  }
+  & .menu__item {
+    & .header__menu__link {
+      display: block;
+      padding: 1.5rem;
+      color: $white;
+      text-transform: uppercase;
+      font-size: $font-14;
+      &:hover {
+        background-color: $cam;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.menu__link {
+  font-size: $font-14;
+  color: $white;
+  padding: 1.93rem 0;
+  text-align: center;
+  background-color: $cam;
+  display: block;
+  text-transform: uppercase;
+}
+.fa-shopping-cart {
+  color: $white;
+  font-size: $font-18;
+}
+.menu__icon .fa-bars {
+  color: $white;
+}
+.header__cart--relative {
+  position: relative;
+  &:hover {
+    cursor: pointer;
+    & i {
+      color: $cam;
+      
+    }
+  }
+}
+.header__cart--absolute {
+  position: absolute;
+  background-color: $cam;
+  width: 24px;
+  top: 8%;
+  right: 6%;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.header__cart--absolute p {
+  padding: 8px;
+}
+
+// end Mobile
+
+// tablet
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header__top {
+    display: flex;
+    justify-content: space-between;
+    & .header__left {
+      display: block;
+    }
+  }
+  .header__hotline {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  .header__search {
+    margin: 1rem 0;
+  }
+  .menu__icon {
+    display: none;
+  }
+  .header__menu {
+    display: block;
+  }
+}
+// end tablet
+
+// desktop
+@media screen and (min-width: 1024px) {
+  .header__hotline {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header__top {
+    display: flex;
+    justify-content: space-between;
+    max-height: 3.33333rem;
+    & .header__left {
+      display: block;
+      text-align: center;
+      & i {
+        font-size: $font-14;
+        width: 3.3333rem;
+        padding: 1.2rem 0;
+        &:hover {
+          background-color: $cam;
+          color: $white;
+        }
+      }
+    }
+    & .header__right {
+      display: inherit;
+      & a {
+        width: 7.333333rem;
+        padding: 1.2rem;
+      }
+    }
+  }
+
+  .header__main {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    & .header__search {
+      width: 21.333333rem;
+      & .search--relative {
+        padding: 0;
+      }
+      & button {
+        right: 3%;
+      }
+    }
+  }
+  .header__bg-menu {
+    & .menu__icon {
+      display: none;
+    }
+    & .header__cart {
+      & a {
+        padding: 1.5rem 0;
+      }
+    }
+    & .header__menu {
+      display: block;
+      & .menu {
+        display: flex;
+      }
+      & .menu__item {
+        & .header__menu__link {
+          display: block;
+          padding: 2rem;
+          color: $white;
+          text-transform: uppercase;
+          font-size: $font-14;
+          &:hover {
+            background-color: $cam;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+// end desktop
+

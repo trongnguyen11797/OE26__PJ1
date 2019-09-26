@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width,initial-scale=1.0")
+        meta(http-euiv="X-UA-Compatible" content="ie=edge")
+        title Giới thiệu website
+        link(rel="stylesheet" href="../../styles/reset/reset.css")
+        link(rel="stylesheet" href="../../styles/main.css")
+        // font css
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
+    body
+        include header.pug
+
+        include homepage.pug
+        
+        include footer.pug    
+
+        script(src='../../JS/addCart.js')

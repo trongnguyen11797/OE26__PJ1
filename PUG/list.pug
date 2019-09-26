@@ -1,0 +1,65 @@
+include mixins/mixin-list.pug
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width,initial-scale=1.0")
+        meta(http-euiv="X-UA-Compatible" content="ie=edge")
+        title Giới thiệu website
+        link(rel="stylesheet" href="../../styles/reset/reset.css")
+        link(rel="stylesheet" href="../../styles/main.css")
+        // font css
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
+    body
+        include header.pug
+        .resize__wrapper.list__responsive.grid__responsive--menu 
+            .link__web
+                p Trang chủ 
+                    i.fas.fa-caret-right
+                    |Danh mục sản phẩm
+            .details--flex
+                .details--grid
+                    .details__flex--left
+                        +detailsMenu('fas fa-bars', 'danh mục sản phẩm')
+                        +detailsMenu('fas fa-th-large', 'Máy in phun khổ lớn', 'Máy quét Canon 3D', 'Máy hàn điện Alunima', 'Máy khoan Decameta', 'Máy phay đa năng CNC', 'Máy mài, tiện DC 12V', 'Máy khoan, cắt CNC', 'Máy quay thông minh N3', 'Motor R34C đa dạng', 'Máy in laser màu 3D')
+                        +detailsMenu('fas fa-dollar-sign', 'tìm theo mức giá')
+                        - var items = ['0-200.000 Đ (46)' ,'200.000 Đ - 500.000 Đ (32)','500.000 Đ - 1000.000 Đ (27)','1000.000 Đ - 2000.000 Đ (16)','trên 2000.000 Đ (9)']
+                        - for(var i=0; i<5; i++) {
+                            +detailsMenu('fas fa-th-large',`${items[i]}`)    
+                        - }
+
+                        +detailsMenu('fas fa-paint-brush', 'tìm theo màu sắc')
+                        - var items = ['Màu đỏ (45)', 'Màu vàng (32)', 'Màu xanh (27)', 'Màu bạc (16)', 'Màu đen (9)']
+                        - for(var i=0; i<5; i++) {
+                            +detailsMenu('fas fa-square', `${items[i]}`)
+                        - }
+
+                        +detailsMenu('fas fa-gift', 'sản phẩm khuyến mại')
+                        - var i=1
+                        - for(i; i<= 5; i++) {
+                            +detailsMenuImg(`../../images/details-${i}.png `, 'máy khoan black decker loại 1', '1.550.000 Đ')
+                        - }
+                .details__flex--right
+                    .list__title
+                        .list--left
+                            span Sắp xếp theo:
+                                select
+                                    option Tên sản phẩm
+                            span Show: 
+                                select
+                                    option 9
+                        .list--right
+                            i(class="fas fa-bars")
+                            i(class="fas fa-th")
+                    .detailt__title
+                        .details--grid.details__hmv.details__list
+                            +detailsMenuItem('../../images/nb-maykhoan-1.png','../../images/hmv-2.png','../../images/hmv-3.png','../../images/hmv-4.png', '../../images/spm-3.png', '../../images/nb-maykhoan-4.png', '../../images/details-4.png', '../../images/img1.png', '../../images/cart-2.png')
+            .details__bottom
+                .pagination
+                    - var items = ['Trang trước', '1', '2', '3', 'Trang sau']
+                    each item in items
+                        a(href="#")= item
+        include footer.pug    
+

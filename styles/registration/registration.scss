@@ -1,0 +1,43 @@
+.form__regis {
+    & h3 {
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 2rem 0;
+    }
+    & p {
+        color: #c6c6c6;
+    }
+    & .regis__form--flex {
+        display: flex;
+        & .regis__form--flex--left {
+            margin-right: 2rem;
+            width: 49%
+        }
+        & .regis__form--flex--right {
+            width: 49%;
+        }
+        & input[type='text'] {
+            width: 100%;
+            margin: 1rem 0;
+            padding: 1rem 0;
+            border:1px solid #e1e1e1;
+        }
+        & label::after {
+            content: '*';
+            color: red;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .resgister__responsive {
+        & .form__regis {
+            & .regis__form--flex {
+                display: flex;
+                flex-direction: column;
+                & .regis__form--flex--left, & .regis__form--flex--right {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

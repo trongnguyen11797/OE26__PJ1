@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width,initial-scale=1.0")
+        meta(http-euiv="X-UA-Compatible" content="ie=edge")
+        title Giới thiệu website
+        link(rel="stylesheet" href="../../styles/reset/reset.css")
+        link(rel="stylesheet" href="../../styles/main.css")
+        // font css
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
+    body
+        include header.pug
+        .resize__wrapper.login__responsive
+            .link__web
+                p Trang chủ 
+                    i.fas.fa-caret-right
+                    | Đăng nhập
+            .login__flex
+                form.login-form(action="POST")
+                    h3.login__title THÔNG TIN ĐĂNG NHẬP
+                    label Họ và tên: 
+                    input(type='text')
+                    label Email: 
+                    input(type='email')
+                    .login__text
+                        input(type='checkbox') 
+                        | Ghi nhớ đăng nhập
+                        a(href="#") Bạn quên mật khẩu ?
+                    button.btn__login ĐĂNG NHẬP
+                .login__flex-right
+                    h3.login__title BẠN CHƯA CÓ TÀI KHOẢN ?
+                    p Đăng ký tài khoản để mua hàng nhanh hơn. Theo dõi đơn đặt hàng, vận chuyển. Cập nhật các tin tức sự kiện và các chương trình giảm giá của chúng tôi.
+                    br
+                    button.btn__login ĐĂNG KÍ
+                
+
+        include footer.pug    

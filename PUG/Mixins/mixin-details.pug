@@ -1,0 +1,38 @@
+mixin detailsMenuImg(src, h3, p)
+    .details__img--flex
+        .details__img--left
+            img(src= src)
+        .details__img--right
+            h3= h3
+            p= p
+mixin detailsMenu(i, ...a) 
+    each item in a
+        .details__flex--left--menu--column.details__flex--left--menu--column--none.menu--hover
+            i(class= i)
+                span(href="#")= item
+mixin detaiImg(...src)
+    .detai__grid
+        each item in src
+            .detai__grid--item
+                img(src= item class="blog__details--responsive-img")
+mixin details(span, i1, i2)
+    .footer__top--title.grid--title.detai__item
+        i.fas.fa-th-large.grid--icon
+            span= span    
+        .btn__flex
+                i(class= i1)
+                i(class= i2)
+mixin detailsMenuItem( ...src)
+        each item in src
+            .details__grid--item
+                .grid--item--img
+                    img(src= item alt="Ảnh img sản phẩm" class="resize-img")
+                .grid--item--text
+                    p 1.550.00 Đ
+                    p MÁY KHOAN BLACK DECKER
+                    P   
+                        - var item1 = ['fa fa-star']  
+                        - for(var i=0; i< 5; i++) {
+                            i(class= item1)
+                        - }
+                        span (12 Đánh giá)

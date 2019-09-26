@@ -1,0 +1,67 @@
+.list__grid--button {
+  visibility: visible;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.details__list {
+  display: -ms-grid !important;
+  display: grid !important;
+  -ms-grid-columns: auto !important;
+      grid-template-columns: auto !important;
+}
+
+.details__list {
+  margin-top: 2rem;
+}
+
+.details__list:nth-child(1) {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 1140px) {
+  .list__responsive .details--flex .details__flex--right .detailt__title .details__grid--item {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .list__responsive .details--flex .details__flex--right .detailt__title .details__grid--item .grid--item--img img {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid__responsive--menu .details--flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .grid__responsive--menu .details--flex .details__flex--right {
+    margin-left: 0;
+  }
+  .grid__responsive--menu .details--flex .details--grid .details__grid--item .grid--item--img img {
+    margin: 0 auto !important;
+  }
+  .grid__responsive--menu .details--flex .details--grid .details__grid--item .details__hmv--right .gird--item--text--style {
+    text-align: center;
+  }
+  .grid__responsive--menu .details--flex .details--grid .details__grid--item .details__hmv--right .list__grid--button {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .grid__responsive--menu .details--flex .details--grid .details__grid--item:nth-child(5) .grid--item--img img {
+    width: 180px;
+    height: 180px;
+  }
+}
+/*# sourceMappingURL=list.css.map */

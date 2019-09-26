@@ -1,0 +1,71 @@
+include mixins/mixin-blog__details.pug
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width,initial-scale=1.0")
+        meta(http-euiv="X-UA-Compatible" content="ie=edge")
+        title Giới thiệu website
+        link(rel="stylesheet" href="../../styles/reset/reset.css")
+        link(rel="stylesheet" href="../../styles/main.css")
+        // font css
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
+    body
+        include header.pug
+        .resize__wrapper.blog__responsive.blog__resnponsive--menu 
+            .link__web
+                p Trang chủ 
+                    i.fas.fa-caret-right
+                    |Tin tức
+            .details--flex
+                .details__flex--left
+                    +detailsMenu('fas fa-bars', 'danh mục sản phẩm')
+                    +detailsMenu('fas fa-th-large', 'Máy in phun khổ lớn', 'Máy quét Canon 3D', 'Máy hàn điện Alunima', 'Máy khoan Decameta', 'Máy phay đa năng CNC', 'Máy mài, tiện DC 12V', 'Máy khoan, cắt CNC', 'Máy quay thông minh N3', 'Motor R34C đa dạng', 'Máy in laser màu 3D')
+                    
+                    .blog__clear-padding.blog__border-bottom
+                        +detailsMenu('fas fa-th-large', 'danh mục tin tức')
+                        - var items = ['Đời sống pháp luật (5)', 'Kinh tế trong nước (8)', 'Sức khỏe và gia đình (9)', 'Công nghệ thông tin (5)', 'Tin tức khác 12 (5)']
+                        - for(var i=0; i<5; i++) {
+                            +detailsMenu(' ', `${items[i]}`)    
+                        - }
+                    .blog__clear-padding
+                        +detailsMenu('fas fa-bars', 'thư viện hình ảnh')
+                        .grid__blog--img
+                            - var items = ["../../images/blog-grid-1.png", "../../images/blog-grid-2.png", "../../images/blog-grid-3.png", "../../images/blog-grid-4.png", "../../images/blog-grid-5.png", "../../images/blog-grid-6.png"]
+                            each item in items
+                                .img1
+                                    img(src= item)
+                    .blog__clear-padding            
+                        +detailsMenu('fas fa-bars', 'thẻ tag')
+                        .blog__tag
+                            - var items = ['thời trang', 'máy khoan', 'news', 'công nghiệp','xây dụng' , 'phay', 'máy cắt', 'hóa chất']
+                            each item in items
+                                a(href='#')= item
+                .details__flex--right
+                    .details__flex--main
+                    - var text = 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure...'
+                    - var images = [ '../../images/blog-banner-1.png ', '../../images/blog-banner-2.png', '../../images/blog-banner3.png', '../../images/blog-banner-5.png' ]
+                    - for(var i=0; i<4; i++) {
+                        .blog__img
+                            img(src= images[i] class='resize-img')
+                        .blog__title
+                            h3 thế hệ máy khoan cắt cnc đầu tiên đã được tái sử dụng
+                            .blog__title--flex
+                                span Thứ năm, ngày 23/10/2015 8:00 AM 
+                                span
+                                    i(class="fas fa-user-alt")    Đăng bởi 
+                                    span   Design Team
+                                span 
+                                    i(class="far fa-comments")    12 Bình luận
+                        .blog__text
+                            p= text
+                    - }
+            .details__bottom
+                .pagination
+                    - var items = ['Trang trước', '1', '2', '3', 'Trang sau']
+                    each item in items
+                        a(href="#")= item
+        include footer.pug   
+            

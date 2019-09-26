@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width,initial-scale=1.0")
+        meta(http-euiv="X-UA-Compatible" content="ie=edge")
+        title Giới thiệu website
+        link(rel="stylesheet" href="../../styles/reset/reset.css")
+        link(rel="stylesheet" href="../../styles/main.css")
+        // font css
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
+    body
+        include header.pug
+        .resize__wrapper.resgister__responsive
+            .link__web
+                p Trang chủ 
+                    i.fas.fa-caret-right
+                    |  Đăng ký
+            form.form__regis(action="GET")
+                h3 THÔNG TIN CÁ NHÂN:
+                .regis__form--flex
+                    .regis__form--flex--left                                                    
+                        label Họ và tên: 
+                        input(type='text')
+                        label Số điện thoại: 
+                        input(type="text")
+                    .regis__form--flex--right
+                        label Email: 
+                        input(type='text')
+                        label Địa chỉ:  
+                        input(type="text")  
+                p 
+                    input(type='checkbox')
+                    |    Đăng kí nhận tin tức qua email
+                h3 THÔNG TIN ĐĂNG NHẬP:
+                .regis__form--flex
+                    .regis__form--flex--left
+                        label Họ và tên: 
+                        input(type="text")
+                    .regis__form--flex--right
+                        label Email: 
+                        input(type='text')
+                button.btn__login QUAY LẠI
+                button.btn__login ĐĂNG KÍ
+        include footer.pug    
+

@@ -1,0 +1,11 @@
+mixin headerMenu(li, a, ...args) 
+    nav.header__menu
+        ul.menu
+            each item in args
+                li(class= li)
+                    a(class= a)= item
+mixin nav(...items)
+    ul(class= "menu__list")
+        each item in items
+            li(class= "menu__list__item")
+                a(class= "menu__list__link" href="#") 

@@ -1,0 +1,60 @@
+
+@import '../variable/variable.scss';
+.blog__text {
+    & p::after {
+        content: ' Đọc tiếp';
+        color: $cam;
+    }
+}
+.blog__title--flex {
+    & span {
+        &:nth-child(2) {
+            color: $cam;
+        }
+    }
+}
+@media screen and (max-width: 1140px) {
+    
+    .blog__responsive {
+        & .details__flex--right {
+            margin-left: 1rem;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .blog__resnponsive--menu {
+        .details--flex {
+            display: flex;
+            flex-direction: column;
+            & .details__flex--left {
+                & .details__flex--left--menu--column {
+                    display: none;
+                }
+                & .details__flex--left--menu--column:nth-child(1) {
+                    display: block;
+                }
+                & .blog__clear-padding {
+                    display: none;
+                    &:nth-child(12) {
+                        display: block;
+                    }
+                    &:nth-child(13) {
+                        display: block;
+                        & .grid__blog--img {
+                            display: none;
+                        }
+                    }
+                    &:nth-child(14) {
+                        display: block;
+                        & .blog__tag {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            & .details__flex--right {
+                margin-left: 0;
+            }
+        }
+    }
+}

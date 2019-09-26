@@ -1,0 +1,55 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width,initial-scale=1.0")
+        meta(http-euiv="X-UA-Compatible" content="ie=edge")
+        title Giới thiệu website
+        link(rel="stylesheet" href="../../styles/reset/reset.css")
+        link(rel="stylesheet" href="../../styles/main.css")
+        // font css
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
+    body(onload="showTable()")
+        include header.pug
+        .resize__wrapper.shoppingcart__responsive
+            .link__web
+                p Trang chủ 
+                    i.fas.fa-caret-right
+                    |Giỏ hàng
+            .responsive__table
+                table.table__cart#showTable
+                    tr  
+                        thead
+                            - var ths = ['stt', 'sản phẩm', 'thông tin', 'đơn giá', 'số lượng', 'thành tiền', 'xóa']
+                            -for(var i=0; i<7; i++) {
+                                th= ths[i]
+                            - }
+                    tbody(id='tbody')
+            table.table__total#showtotalTable
+                tbody
+                    tr
+                        td
+                            p Tổng tiền
+                        td
+                            p#showPay 0 Đ
+                    tr
+                        td 
+                            p Thuế (VAT)
+                        td  
+                            p#showTax 0 Đ
+                    tr
+                        td
+                            p Thanh toán
+                        td
+                            p#totalFax 0 Đ
+                    tr
+                        td.btn--none
+                            button TIẾP TỤC MUA HÀNG
+                        td.btn--none
+                            button THANH TOÁN
+        include footer.pug
+
+        script(src='../../JS/addCart.js')    
+        

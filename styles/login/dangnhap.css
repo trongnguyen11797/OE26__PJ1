@@ -1,0 +1,82 @@
+.login__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.login__flex .login-form {
+  margin-right: 2rem;
+}
+
+.login__flex .login__title {
+  font-size: 0.9333333rem;
+  color: #333;
+  font-weight: bold;
+  padding: 2rem 0;
+}
+
+.login__flex label {
+  width: 100%;
+  font-size: 0.9333333rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.login__flex label::after {
+  content: " *";
+  color: red;
+}
+
+.login__flex input[type="text"],
+.login__flex input[type="email"] {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.login__flex .login__text {
+  margin-bottom: 2rem;
+}
+
+.login__flex .login__text a {
+  float: right;
+  font-size: 0.93333rem;
+  color: #f5bd10;
+  border-bottom: 1px solid #f5bd10;
+}
+
+.login__flex .login__flex-right p {
+  color: #939393;
+}
+
+.btn__login {
+  padding: 1rem 1.33333rem;
+  background-color: #252525;
+  color: #fff;
+  border: none;
+}
+
+.btn__login:hover {
+  background-color: #f5bd10;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .login__flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .login__flex .login-form .login__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+/*# sourceMappingURL=dangnhap.css.map */

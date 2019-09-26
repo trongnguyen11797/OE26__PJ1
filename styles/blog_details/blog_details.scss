@@ -1,0 +1,240 @@
+@import '../variable/variable.scss';
+.blog__border-bottom {
+  & .details__flex--left--menu--column:nth-child(1) {
+    border-bottom: 1px solid $cam;
+  }
+}
+.blog__clear-padding {
+  & .details__flex--left--menu--column:nth-child(1) {
+    background-color: $white;
+    
+    & span {
+      color: #333;
+      font-weight: bold;
+      font-size: 0.933333rem;
+    }
+  }
+  .details__flex--left--menu--column {
+    & i {
+      padding-left: 0;
+    }
+  }
+}
+.grid__blog--img {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 7px 7px;
+}
+.blog__tag {
+  & a {
+    font-size: 0.8666667rem;
+    color: #9c9c9c;
+    padding: 0.6666667rem 1rem;
+    display: inline-block;
+    text-transform: initial;
+    &:hover {
+      background-color: $da;
+      color: $white;
+    }
+  }
+}
+
+.details__flex--right {
+  & .details__flex--main {
+    & .blog__title {
+      & h3 {
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 1.33333rem 0;
+      }
+      & .blog__title--flex {
+        display: flex;
+        & span {
+          margin-right: 2rem;
+          font-size: 0.866667rem;
+          margin-bottom: 1rem;
+          & i {
+            color: $a1a;
+          }
+        }
+      }
+    }
+    & .blog__text {
+      text-align: justify;
+      & p {
+        font-size: 0.866667rem;
+        color: $a1a;
+        &:nth-child(1) {
+          margin-bottom: 1rem;
+        }
+        &:nth-child(3) {
+          margin-top: 1rem;
+        }
+      }
+    }
+    & .blog__img {
+      margin: 2rem 0;
+      &:nth-child(1) {
+        margin: 0;
+      }
+      
+    }
+    & .blog__tag {
+      margin-top: 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & p:nth-child(1)::before {
+        content: "TAG: ";
+        color: #333;
+        font-weight: bold;
+      }
+      & p:nth-child(2)::before {
+        content: "Chia sẽ: ";
+        color: #333;
+        font-weight: bold;
+      }
+      & i {
+        padding: 0.666667rem;
+        color: $a1a;
+        border: 1px solid $a1a;
+        margin-right: 0.5rem;
+        &:hover {
+          background-color: $cam;
+          border-color: $cam;
+          color: $white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  & .details__flex--comment {
+    & > h3 {
+      padding: 4rem 0;
+      color: #333;
+      font-weight: bold;
+    }
+    & .user__comment {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+      &:nth-child(3) {
+        margin-left: 8.1rem;
+      }
+      & .comment__img {
+        border: 1px solid #e1e1e1;
+        padding: 0.33333rem;
+        margin-right: 1.3333rem;
+        & img {
+          display: block;
+        }
+      }
+      & .comment__text {
+        & h3 {
+          margin-bottom: 0.66667rem;
+        }
+        & p {
+          font-size: 0.866667rem;
+          &:nth-child(2) {
+            color: $a1a;
+            margin-bottom: 1rem;
+            &::after {
+              content: "Trả lời";
+              float: right;
+              color: $cam;
+              border-bottom: 1px solid $cam;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.details__flex--bottom {
+  .blog__form {
+    & h3 {
+      font-weight: bold;
+      margin: 2rem 0;
+    }
+    & .column {
+      display: flex;
+      & label::after {
+        content: " *";
+        color: red;
+      }
+      .column1 {
+        width: 50%;
+        margin-right: 1rem;
+        & input {
+          width: 100%;
+        }
+      }
+      .column2 {
+        width: 50%;
+        & input {
+          width: 100%;
+        }
+      }
+    }
+    & .row {
+      & label {
+        margin: 1rem 0;
+        display: block;
+      }
+      & textarea {
+        width: 100%;
+      }
+      & button {
+        padding: 1rem;
+        background-color: $da;
+        color: $a1a;
+        border: none;
+        margin: 2rem 0;
+        &:hover {
+          background-color: $cam;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+.max-width {
+  max-width: 43.5333333rem;
+}
+.blog__details--responsive {
+  & .details--flex {
+    & .details__flex--right {
+      .blog__img {
+        text-align: center;
+        & .blog__details--responsive-img {
+          width: 100%;
+          height: auto;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+// mobile
+@media screen and (max-width: 768px ) {
+  .blog__details--responsive {
+    & .details--flex {
+      & .details__flex--right {
+        & .details__flex--main {
+          & .blog__tag {
+            flex-direction: column;
+            align-items: stretch;
+          }
+        }
+        & .details__flex--comment {
+          & .user__comment:nth-child(3) {
+            margin-left: 0;
+          }
+        }
+      }
+      
+    }
+  }
+}
+// end mobile

@@ -1,0 +1,47 @@
+.banner__notfound {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner__notfound .banner--left {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.banner__notfound .banner--left h3 {
+  font-size: 6.6666667rem;
+  color: #f5bd10;
+  font-weight: bold;
+}
+
+.banner__notfound .banner--left p {
+  font-size: 1.2rem;
+  color: #515151;
+  margin: 2.66667rem 0;
+}
+
+.banner__notfound .banner--left a {
+  padding: 1.33333rem 2rem;
+  background-color: #252525;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .banner__notfound {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .banner__notfound .banner--left, .banner__notfound .banner--right {
+    margin: 0 auto;
+  }
+  .banner__notfound .banner--right {
+    margin-top: 2rem;
+  }
+}
+/*# sourceMappingURL=404.css.map */

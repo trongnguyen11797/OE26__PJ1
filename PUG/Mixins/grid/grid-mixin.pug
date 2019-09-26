@@ -1,0 +1,29 @@
+mixin detailsMenu(i, ...a) 
+    each item in a
+        .details__flex--left--menu--column.details__flex--left--menu--column--none.menu--hover
+            i(class= i)
+            span(href="#")= item
+mixin detailsMenuImg(src, h3, p)
+    .details__img--flex
+        .details__img--left
+            img(src= src)
+        .details__img--right
+            h3= h3
+            p= p
+mixin detailsMenuItem(...src)
+    each item in src
+        .details__grid--item.details__grid--item--grid
+            .grid--item--img
+                img(src= item alt="Ảnh img sản phẩm" class="resize-img")
+            .grid--item--text
+                p 1.550.00 Đ
+                p MÁY KHOAN BLACK DECKER
+                P   
+                    - var item1 = ['fa fa-star']  
+                        - for(var i=0; i< 5; i++) {
+                            i(class= item1)
+                        - }
+                    span (12 Đánh giá)
+            .grid--item--button
+                button Mua ngay
+                button Xem chi tiết      

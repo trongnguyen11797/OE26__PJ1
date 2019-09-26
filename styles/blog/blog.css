@@ -1,0 +1,55 @@
+@charset "UTF-8";
+.blog__text p::after {
+  content: ' Đọc tiếp';
+  color: #f5bd10;
+}
+
+.blog__title--flex span:nth-child(2) {
+  color: #f5bd10;
+}
+
+@media screen and (max-width: 1140px) {
+  .blog__responsive .details__flex--right {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .blog__resnponsive--menu .details--flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blog__resnponsive--menu .details--flex .details__flex--left .details__flex--left--menu--column {
+    display: none;
+  }
+  .blog__resnponsive--menu .details--flex .details__flex--left .details__flex--left--menu--column:nth-child(1) {
+    display: block;
+  }
+  .blog__resnponsive--menu .details--flex .details__flex--left .blog__clear-padding {
+    display: none;
+  }
+  .blog__resnponsive--menu .details--flex .details__flex--left .blog__clear-padding:nth-child(12) {
+    display: block;
+  }
+  .blog__resnponsive--menu .details--flex .details__flex--left .blog__clear-padding:nth-child(13) {
+    display: block;
+  }
+  .blog__resnponsive--menu .details--flex .details__flex--left .blog__clear-padding:nth-child(13) .grid__blog--img {
+    display: none;
+  }
+  .blog__resnponsive--menu .details--flex .details__flex--left .blog__clear-padding:nth-child(14) {
+    display: block;
+  }
+  .blog__resnponsive--menu .details--flex .details__flex--left .blog__clear-padding:nth-child(14) .blog__tag {
+    display: none;
+  }
+  .blog__resnponsive--menu .details--flex .details__flex--right {
+    margin-left: 0;
+  }
+}
+/*# sourceMappingURL=blog.css.map */

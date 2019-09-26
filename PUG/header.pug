@@ -1,0 +1,43 @@
+include mixins/mixin-header.pug
+header
+    .header
+        .header__size
+            .header__top.resize__wrapper
+                .header__left
+                    i.fab.fa-facebook-f
+                    i.fab.fa-google-plus-g
+                    i.fab.fa-instagram
+                    i.fab.fa-twitter
+                .header__right
+                    a(href="#") Đăng ký
+                    a(href="#") Đăng nhập
+        .resize__wrapper
+            .header__main
+                .header__logo
+                    img(src="../../images/header-logo.jpg", alt="Ảnh logo", class="resize-img")
+                .header__hotline
+                    .header__hotline-left.header__hotline-style
+                        h3 HOTLINE
+                        p (04) 9500 9650 - (04) 9500 8850
+                    .header__hotline-right.header__hotline-style
+                        h3 ĐẶT HÀNG NHANH
+                        p (04) 9500 9650 - (04) 9500 8850
+                .header__search
+                    .search--relative
+                        input(type="text" placeholder="Tìm kiếm...")
+                        button 
+                            i.fas.fa-search
+        .header__bg-menu
+            .resize__wrapper.header__bottom
+                .menu__icon
+                    a(href="#")
+                        i.fas.fa-bars            
+                +headerMenu('menu__item', 'header__menu__link', 'trang chủ', 'giới thiệu', 'sản phẩm', 'tin khuyến mại', 'dịch vụ', 'liên hệ')
+                .header__cart
+                    .header__cart--relative(onclick="window.location='shoppingcar.html' ")
+                        a(href="#")
+                            i.fas.fa-shopping-cart
+                        .header__cart--absolute
+                            p#showLength 0
+script(src='../../JS/addCart.js')
+
