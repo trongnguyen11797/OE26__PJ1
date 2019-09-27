@@ -1,3 +1,4 @@
+// show datasa
 function showTable() {
   let getLocal = JSON.parse(localStorage.getItem("data"));
   if (getLocal) {
@@ -42,7 +43,7 @@ function showTotalTable() {
   getTotal.innerHTML = formatNumber(num+num*0.01) + ' Đ';
 }
 
-
+// set data to JSON
 function setData(data) {
   localStorage.setItem("data", JSON.stringify(data));
   //   let getLocal = JSON.parse(localStorage.getItem("data"));
@@ -54,6 +55,7 @@ function formatNumber(num) {
   return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 }
 
+// delete item
 function deleteItem(x) {
   let id = x.parentNode.parentNode.rowIndex;
   document.getElementById("showTable").deleteRow(id);
